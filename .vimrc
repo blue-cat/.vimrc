@@ -28,8 +28,10 @@ let g:DoxygenToolkit_authorName="Luca Shin lucashen@tencent.com"
 let g:DoxygenToolkit_licenseTag="My own license"
 
 Plugin 'vim-scripts/taglist.vim'
+nmap tl :Tlist<CR> "tl为快捷键
 let Tlist_Show_One_File=1 "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Use_Right_Window=1  "在右侧窗口中显示taglist窗口
+let Tlist_Exit_OnlyWindow=1 "如果Taglist窗口是最后一个窗口则退出Vim
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 call vundle#end()            " required
