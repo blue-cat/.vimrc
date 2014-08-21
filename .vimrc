@@ -17,13 +17,21 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 
 Plugin 'scrooloose/nerdcommenter'
 let mapleader=","   "设置<leader>键为,，比如,cc给当前行加入//注释，使用,cu恢复
+nmap <C-S-j> ,cc
+imap <C-S-j> <Esc>,cci<Left>
+nmap <C-\> ,cu
+imap <C-\> <Esc>,cui<Left>
 
-Plugin 'vim-scripts/DoxygenToolkit.vim' "函数注释以及文件申明 :Dox 函数注释 :DoxAuthor
+Plugin 'vim-scripts/DoxygenToolkit.vim' "函数注释以及文件申明 :Dox 文件注释 :DoxAuthor
+nmap <F12> :Dox<CR>
+imap <F12> <Esc>:Dox<CR>
+nmap <F11> 2G:DoxAuthor<CR>
+imap <F11> <Esc>2G:DoxAuthor<CR>
 let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
 let g:DoxygenToolkit_paramTag_pre="@Param "
 let g:DoxygenToolkit_returnTag="@Returns   "
-let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
-let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
+"let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
+"let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
 let g:DoxygenToolkit_authorName="Luca Shin lucashen@tencent.com"
 let g:DoxygenToolkit_licenseTag="My own license"
 
@@ -64,3 +72,8 @@ set helplang=ch
 set termencoding=utf-8  "Vim 所工作的终端的字符编码方式
 set encoding=utf-8  "Vim 内部使用的字符编码方式，包括 Vim 的 buffer (缓冲区)、菜单文本、消息文本等
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936    "Vim 启动时会按照它所列出的字符编码方式逐一探测
+
+" "==========================================================================================
+" 常用快捷键设置
+nmap <C-Left> gT
+nmap <C-Right> gt
