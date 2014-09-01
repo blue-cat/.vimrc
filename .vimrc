@@ -42,6 +42,16 @@ let Tlist_Use_Right_Window=1  "在右侧窗口中显示taglist窗口
 let Tlist_Exit_OnlyWindow=1 "如果Taglist窗口是最后一个窗口则退出Vim
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
+"Plugin 'lilydjwg/colorizer'
+"Plugin 'ap/vim-css-color'
+"Plugin 'maksimr/vim-jsbeautify'
+Plugin 'kien/ctrlp.vim'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_open_new_file = 'v'
+
+Plugin 'mattn/emmet-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    "必须
 
