@@ -89,3 +89,6 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936    "Vim 启动时会按
 nmap <C-Left> gT
 nmap <C-Right> gt
 set pastetoggle=<F10>
+
+" 对齐线
+set cc=80
