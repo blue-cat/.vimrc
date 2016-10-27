@@ -92,3 +92,6 @@ set pastetoggle=<F10>
 
 " 对齐线
 set cc=80
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
