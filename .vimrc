@@ -52,6 +52,32 @@ let g:ctrlp_open_new_file = 'v'
 
 Plugin 'mattn/emmet-vim'
 
+Plugin 'easymotion/vim-easymotion'
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+Plugin 'fatih/vim-go'
+
+Plugin 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 1 
+let g:syntastic_check_on_open = 1 " 打开时自动检查
+let g:syntastic_check_on_wq = 1 " 保存时自动检查
+let g:syntastic_auto_loc_list = 1 
+
 call vundle#end()            " required
 filetype plugin indent on    "必须
 
@@ -91,7 +117,7 @@ nmap <C-Right> gt
 set pastetoggle=<F10>
 
 " 对齐线
-set cc=80
+"set cc=80
 
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
