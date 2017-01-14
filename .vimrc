@@ -17,9 +17,9 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 
 Plugin 'scrooloose/nerdcommenter'
 let mapleader=","   "设置<leader>键为,，比如,cc给当前行加入//注释，使用,cu恢复
-nmap <C-S-j> ,cc
+map <C-S-j> ,cc
 imap <C-S-j> <Esc>,cci<Left>
-nmap <C-\> ,cu
+map <C-\> ,cu
 imap <C-\> <Esc>,cui<Left>
 
 Plugin 'vim-scripts/DoxygenToolkit.vim' "函数注释以及文件申明 :Dox 文件注释 :DoxAuthor
