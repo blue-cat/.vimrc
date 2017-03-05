@@ -95,6 +95,7 @@ filetype plugin on      "针对不同的文件类型加载对应的插件
 
 syntax on               "启用语法高亮
 set nu
+set relativenumber
 set smartindent         "启用智能对齐方式
 set expandtab           "TAB转空格
 set tabstop=4           "TAB为4个空格
